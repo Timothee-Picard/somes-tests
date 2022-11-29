@@ -1,17 +1,10 @@
 <template>
   <div id="app">
-    <NuxtPage></NuxtPage>
+    <NuxtLayout />
   </div>
 </template>
 
 <style>
-body {
-  margin: 0;
-}
- #app {
-   min-height: 100vh;
-   display: flex;
-   justify-content: center;
-   align-items: center;
- }
+body {margin: 0;}
+a {color: inherit;text-decoration: none;}
 </style>
