@@ -1,72 +1,45 @@
 <template>
-  <div class="box">
-    <div class="spin-container">
-      <div class="shape">
-        <div class="bd">
-          Je suis un texte
-        </div>
+  <div class="container">
+    <div class="shape">
+      <div class="content">
+        Hello world
       </div>
     </div>
   </div>
 </template>
 
-<script setup>
-
+<script setup lang="ts">
 </script>
 
 <style scoped>
-* {
-  box-sizing: border-box;
-}
-body {
-  background: #003;
-}
-
-.box {
+.container {
   width: 300px;
   height: 300px;
-  border: 1px dashed rgba(255,255,255,0.4);
   position: relative;
 }
-
-.spin-container {
-  width: 100%;
-  height: 100%;
-  animation: spin 12s linear infinite;
-  position: relative;
-}
-
 .shape {
   width: 100%;
   height: 100%;
-  transition: border-radius 1s ease-out;
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  animation: morph 8s ease-in-out infinite both alternate;
-  position: absolute;
   overflow: hidden;
-  z-index: 5;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  animation: morph 8s ease-in-out infinite both alternate, spin 12s infinite linear;
 }
-
-.bd {
+.content {
+  position: absolute;
   width: 142%;
   height: 142%;
-  position: absolute;
-  left: -21%;
-  top: -21%;
-  background-size: 100%;
-  background: url(https://picsum.photos/400/400) center center;
+  top: 50%;
+  left: 50%;
+  animation: reverseSpinAndTranslate 12s infinite linear;
+  background: url("https://picsum.photos/350") center no-repeat;
   background-size: cover;
   display: flex;
-  align-items: center;
   justify-content: center;
-  color: #ffffff;
-  text-align: center;
-  font-weight: bold;
-  font-family: sans-serif;
+  align-items: center;
+  font-size: 1em;
   text-transform: uppercase;
-  animation: spin 12s linear infinite reverse;
-  opacity: 1;
-  z-index: 2;
+  font-weight: bolder;
+
 }
 
 @keyframes morph {
@@ -79,4 +52,14 @@ body {
     transform: rotate(1turn);
   }
 }
+
+@keyframes reverseSpinAndTranslate {
+  from {
+    transform: translate(-50%, -50%) rotate(1turn);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(0turn);
+  }
+}
+
 </style>

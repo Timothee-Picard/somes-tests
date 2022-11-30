@@ -3,6 +3,7 @@
     <nav>
       <NuxtLink to="/">Home page</NuxtLink>
       <NuxtLink to="/section">Section</NuxtLink>
+      <NuxtLink to="/card-hover">Card-hover</NuxtLink>
       <LazyNuxtLink to="animated-shape">animated-shape</LazyNuxtLink>
     </nav>
     <main>
