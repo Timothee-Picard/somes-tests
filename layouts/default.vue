@@ -4,6 +4,7 @@
       <NuxtLink to="/">Home page</NuxtLink>
       <NuxtLink to="/section">Section</NuxtLink>
       <NuxtLink to="/card-hover">Card-hover</NuxtLink>
+      <NuxtLink to="/updown-slider">updown-slider</NuxtLink>
       <LazyNuxtLink to="animated-shape">animated-shape</LazyNuxtLink>
     </nav>
     <main>
