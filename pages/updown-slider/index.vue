@@ -20,7 +20,7 @@
 </template>
 
 <script setup>
- const slide = ref()
+ const slide = ref(0)
  let slideLength = ref(0)
  onMounted(() => {
    slideLength.value = document.querySelectorAll(".aside .slide").length
