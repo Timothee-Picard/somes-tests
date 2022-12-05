@@ -77,6 +77,7 @@ onMounted(() => {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  background-color: #BADB5C;
 }
 .item {
   position: absolute;
