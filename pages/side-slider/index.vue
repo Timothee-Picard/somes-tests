@@ -47,18 +47,18 @@ function displaySlides(array: any[] | NodeListOf<Element>) {
   else {
     const middleItem = Math.ceil(arr.length / 2 -1)
     // Centered item
-    arr[middleItem].style.transform = `perspective(500px) translate3d(0%, 0, 0)`
+    arr[middleItem].style.transform = `perspective(500px) translate3d(0, 0, 0)`
     arr[middleItem].style.zIndex = arr.length * 2 + 1
     // Left items
     arr.forEach((item: { style: { transform: string; zIndex: any; }; }, i: number) => {
       if(i >= middleItem) return
-      item.style.transform = `perspective(500px) translate3d(-${(middleItem- i)*2}0%, -${1* i}00px, -${middleItem - i}00px)`
+      item.style.transform = `perspective(500px) translate3d(-${(middleItem- i)*5}0%, -${1* i}00px, -${middleItem - i}00px)`
       item.style.zIndex = arr.length + i
     })
     // Right items
     arrCopy.forEach((item: { style: { transform: string; zIndex: any; }; }, i: number) => {
       if(i >= middleItem) return
-      item.style.transform = `perspective(500px) translate3d(+${(middleItem- i)*2}0%, -${1* i}00px, -${middleItem - i}00px)`
+      item.style.transform = `perspective(500px) translate3d(+${(middleItem- i)*5}0%, -${1* i}00px, -${middleItem - i}00px)`
       item.style.zIndex = arr.length + i
     })
   }
@@ -76,12 +76,15 @@ onMounted(() => {
   width: 100%;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .item {
   position: absolute;
-  /*transform: perspective(500px) translate3d(0, 0, 0);*/
   transition: 0.3s;
   z-index: 99;
+}
+img {
+  max-width: 95vw;
 }
 
 </style>
