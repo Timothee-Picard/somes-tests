@@ -8,10 +8,8 @@
   </div>
 </template>
 
-<script setup lang="ts">
-</script>
-
 <style scoped>
+/* Custom animation styles kept in plain CSS */
 .container {
   width: 300px;
   height: 300px;
