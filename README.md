@@ -1,42 +1,47 @@
-# Nuxt 3 Minimal Starter
+# Nuxt Starter
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Ce projet utilise [Nuxt](https://nuxt.com) et quelques utilitaires de [@vueuse/core](https://vueuse.org/).
 
-## Setup
+## Installation
 
-Make sure to install the dependencies:
+Assurez-vous d'avoir [Node.js](https://nodejs.org/) installé, puis installez les dépendances :
 
 ```bash
-# yarn
-yarn install
-
-# npm
 npm install
-
-# pnpm
-pnpm install --shamefully-hoist
 ```
 
-## Development Server
+## Lancer le projet
 
-Start the development server on http://localhost:3000
+Démarrez le serveur de développement :
 
 ```bash
 npm run dev
 ```
 
-## Production
+La commande ouvre l'application sur http://localhost:3000.
 
-Build the application for production:
+## Build pour la production
+
+Construisez l'application :
 
 ```bash
 npm run build
 ```
 
-Locally preview production build:
+Prévisualisez le build localement :
 
 ```bash
 npm run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Mettre à jour Nuxt et les dépendances
+
+Pour mettre à jour vers les dernières versions de Nuxt et de ses dépendances principales :
+
+```bash
+npm install nuxt@latest @vueuse/core@latest
+npx nuxi upgrade
+```
+
+Vous pouvez également utiliser `npm outdated` pour lister les dépendances à mettre à jour.
+
