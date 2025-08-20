@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.12",
+    "@tailwindcss/postcss": "^4.1.12",
     "autoprefixer": "^10.4.21",
     "nuxt": "^4.0.3",
     "postcss": "^8.5.6",
